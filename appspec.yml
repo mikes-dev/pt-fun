@@ -1,0 +1,23 @@
+version: 0.0
+os: linux
+files:
+  - source: /run_pt.sh
+    destination: /home/ec2-user/tryapp/run_pt.sh
+  - source: /jmeter5
+    destination: /home/ec2-user/tryapp/
+  - source: /jmeter_testplans
+    destination: /home/ec2-user/tryapp/
+hooks:
+  BeforeInstall:
+    #- location: Scripts/UnzipResourceBundle.sh
+    #- location: Scripts/UnzipDataBundle.sh
+  AfterInstall:
+    #- location: /home/ec2-user/tryapp/run_pt.sh
+    #  timeout: 180
+  ApplicationStart:
+    - location: /home/ec2-user/tryapp/run_pt.sh
+      timeout: 180
+  ValidateService:
+    - location: /home/ec2-user/tryapp/save_test_logs.sh
+      timeout: 180
+      #runas: codedeployuser

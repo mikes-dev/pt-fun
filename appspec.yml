@@ -16,8 +16,8 @@ hooks:
     #  timeout: 180
   ApplicationStart:
     - location: run_pt.sh
-      timeout: 180
+      #timeout: 180
   ValidateService:
     - location: save_test_logs.sh
-      timeout: 180
+      #timeout: 180
       #runas: codedeployuser

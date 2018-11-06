@@ -15,9 +15,9 @@ hooks:
     #- location: /home/ec2-user/tryapp/run_pt.sh
     #  timeout: 180
   ApplicationStart:
-    - location: /home/ec2-user/tryapp/run_pt.sh
+    - location: run_pt.sh
       timeout: 180
   ValidateService:
-    - location: /home/ec2-user/tryapp/save_test_logs.sh
+    - location: save_test_logs.sh
       timeout: 180
       #runas: codedeployuser

@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /run_pt.sh
-    destination: /home/ec2-user/tryapp/run_pt.sh
+    destination: /home/ec2-user/tryapp/
   - source: /jmeter5
     destination: /home/ec2-user/tryapp/jmeter5
   - source: /jmeter_testplans

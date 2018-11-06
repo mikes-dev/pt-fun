@@ -4,9 +4,9 @@ files:
   - source: /run_pt.sh
     destination: /home/ec2-user/tryapp/run_pt.sh
   - source: /jmeter5
-    destination: /home/ec2-user/tryapp/
+    destination: /home/ec2-user/tryapp/jmeter5
   - source: /jmeter_testplans
-    destination: /home/ec2-user/tryapp/
+    destination: /home/ec2-user/tryapp/jmeter_testplans
 hooks:
   BeforeInstall:
     #- location: Scripts/UnzipResourceBundle.sh
